@@ -6,10 +6,17 @@
 </head>
 <body>
 
+
 {{range .}}
-
-<!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
-
+  <h2>{{.AcaYear}}</h2>
+  <h3>{{.Fall.Term}}</h3>
+  {{range .Fall.Courses}}
+    <li>{{.Number}}-{{.Name}}-{{.Units}}</li>
+  {{end}}
+  <h3>{{.Spring.Term}}</h3>
+  {{range .Spring.Courses}}
+    <li>{{.Number}}-{{.Name}}-{{.Units}}</li>
+  {{end}}
 {{end}}
 
 </body>
