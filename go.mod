@@ -4,4 +4,7 @@ go 1.21.4
 
 require github.com/julienschmidt/httprouter v1.3.0
 
-require github.com/satori/go.uuid v1.2.0 // indirect
+require (
+	github.com/satori/go.uuid v1.2.0 // indirect
+	golang.org/x/crypto v0.27.0
+)
