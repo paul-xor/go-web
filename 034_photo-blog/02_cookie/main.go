@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/satori/go.uuid"
 	"html/template"
+	"log"
 	"net/http"
+
+	"github.com/satori/go.uuid"
 )
 
 var tpl *template.Template
@@ -15,7 +17,8 @@ func init() {
 func main() {
 	http.HandleFunc("/", index)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8099", nil)
+	log.Fatal(http.ListenAndServe(":8099", nil))
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
